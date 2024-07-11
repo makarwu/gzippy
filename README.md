@@ -59,3 +59,9 @@ Counter(top_k_class).most_common()[0][0]  # Output: 1
 - Using the second approach can improve accuracy up to a decent amount
 
 ### (3) Efficiency Improvements
+
+- Additionaly, caching the compressed training instances and parallelizing the search across GPU cores reduce runtime significantly, from 12 to 2 hours on the IMDb Movie review dataset.
+
+### (4) Final Thoughts
+
+- also describe dataset overlapping here
