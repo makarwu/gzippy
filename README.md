@@ -65,3 +65,4 @@ Counter(top_k_class).most_common()[0][0]  # Output: 1
 ### (4) Final Thoughts
 
 - also describe dataset overlapping here
+- describe run time from thesis here
