@@ -60,6 +60,8 @@ Counter(top_k_class).most_common()[0][0]  # Output: 1
 
 ### (3) Results
 
+- display the results here
+
 ### (4) Efficiency Improvements
 
 - Additionaly, caching the compressed training instances and parallelizing the search across GPU cores reduce runtime significantly, from 12 to 2 hours on the IMDb Movie review dataset.
