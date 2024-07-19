@@ -58,15 +58,23 @@ Counter(top_k_class).most_common()[0][0]  # Output: 1
 
 - Using the second approach can improve accuracy up to a decent amount
 
+The full approach can be demonstrated as follows:
+![Pseudocode](./src/gzip_approach.png)
+
 ### (3) Results
 
-- display the results here
+- the results strongly depend on the compression ratio of the dataset, since compression ratios and test accuracies have a positive linear correlation meaning that the easier a dataset can be compressed, the better accuracy can be achieved.
 
 ### (4) Efficiency Improvements
+
+- Gzip has a limited sliding window size for searching repeated strings. This limitation becomes apparent when dealing with large datasets (e.g., 20News) as the compressor may not capitalize the quantity of training samples.
+
+- Moreover, the computational complexity of kNN is $\Theta(n^2)$, which becomes a significant limitation as the data size increases.
 
 - Additionaly, caching the compressed training instances and parallelizing the search across GPU cores reduce runtime significantly, from 12 to 2 hours on the IMDb Movie review dataset.
 
 ### (5) Final Thoughts
 
-- also describe dataset overlapping here
-- describe run time from thesis here
+- this method is cool, since it relies on CPU resources, eliminating negative environmental impacts related to GPU usage.
+- since the run-time doesn't scale well on large datasets, we can make use of multiprocessing techniques.
+- Dataset Overlapping: The datasets used in the original paper had an ![Overlap issue](./src/overlap.png) leveraging wrong results for train/test accuracies.
