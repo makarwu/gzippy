@@ -77,4 +77,4 @@ The full approach can be demonstrated as follows:
 
 - this method is cool, since it relies on CPU resources, eliminating negative environmental impacts related to GPU usage.
 - since the run-time doesn't scale well on large datasets, we can make use of multiprocessing techniques.
-- Dataset Overlapping: The datasets used in the original paper had an ![Overlap issue](./src/overlap.png) leveraging wrong results for train/test accuracies.
+- Dataset Overlapping: The datasets used in the original paper had a dataset overlaping issue ![Overlap issue](./src/overlap.png) leveraging wrong results for train/test accuracies.
