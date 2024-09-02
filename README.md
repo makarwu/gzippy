@@ -8,8 +8,8 @@
 - Suppose we have two texts $t_1, t_2$ where:
 
 ```python
-t_1 = "hello world"
-t_2 = "some text some text some text"
+txt_1 = "hello world"
+txt_2 = "some text some text some text"
 
 # Compress individual texts
 len(gzip.compress(txt_1.encode()))  # Output: 31
